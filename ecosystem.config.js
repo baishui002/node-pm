@@ -1,6 +1,6 @@
 module.exports = {
   apps : [{
-    name: 'API-TEST',
+    name: 'API',
     script: 'app.js',
 
     // Options reference: https://pm2.keymetrics.io/docs/usage/application-declaration/
@@ -12,9 +12,6 @@ module.exports = {
     env: {
       NODE_ENV: 'development'
     },
-    env_development: {
-      NODE_ENV: 'dev2'
-    },
     env_production: {
       NODE_ENV: 'production'
     }
@@ -22,8 +19,8 @@ module.exports = {
 
   deploy : {
     production : {
-      user : 'root',
-      host : ['111.229.141.27'],
+      user : 'node',
+      host : '212.83.163.1',
       ref  : 'origin/master',
       repo : 'git@github.com:repo.git',
       path : '/var/www/production',
